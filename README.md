@@ -1,4 +1,4 @@
-# neural_network_pattern_recog
+# Assignmenet 5: Neural Network Pattern Recognition
 
     Peter Mavronicolas
     Old Dominion University
