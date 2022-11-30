@@ -13,6 +13,7 @@ The data file named "optdigits-orig.windep.Z" was downloaded and unzipped using 
 imported the data into Matlab which revealed (1) column and 59,301+ rows of data. I then copied the data from 
 Matlab and pasted it into a new excel file which I named "optdigits.xlsx".
 
+![](Matlab_data.png "Matlab Data")
 ### Data Cleaning
 The beginning of the file contained informational rows that were discarded though manual data cleaning. I was now 
 left with 59,301 rows. In order to concatenate each set of 32 rows that depicted the number 0-9 in 0's and 1's, I
@@ -50,6 +51,8 @@ create the new spreadsheet, I was constantly given the command line error which 
 ```commandline
 Index in position 1 exceeds array bounds. Index must not exceed 59298.
 ```
+![](Matlab_error.png "Matlab Error")
+
 If time permits, I plan to re-visit this code and correct my errors.
 
 ## Task 2: Option 2
@@ -62,12 +65,19 @@ nnprtool
 Once the neural network pattern recognition tool is opened, I imported the Cancer data set provided
 by Matlab. I left the default setting of Training Data 70%, Validation Data 15%, Test Data 15%. The
 layer size was increased to 20 as demonstrated in class.
+![](nnpr_cancer_data.png "NNPR Cancer Data")
+
+![](nnpr.png "NNPR")
 
 ### Results
-![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")
-
-
+![](training_state.png "Training State")
+![](training_results.png "Training Results")
 ### Analysis
+![](performance.png "Performance")
+
+![](confusion_matrix.png "Confusion Matrix")
+
+![](roc_curve.png "ROC Curve")
 
 ## Works Cited
 * MATLAB. (2020, July 21). How to use source control in Matlab with GitHub. YouTube. Retrieved November 30, 2022, from https://www.youtube.com/watch?v=O7A27uMduo0 

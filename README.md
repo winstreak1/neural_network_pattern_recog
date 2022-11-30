@@ -10,9 +10,11 @@
 Pattern recognition using neural network in Matlab. Optdigits as the data source. See Works Cited
 
 ## How to Use
-1) In Matlab, select 
-![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")
-2) To view optdigits.xlsx, double-click on the filename in the workspace on the left.
+1) In Matlab, select New + > Project > From Git
+![Open Github Clone](open_project.png "Open Github Clone")
+
+2) Paste in the following url: https://github.com/winstreak1/neural_network_pattern_recog.git
+3) To view optdigits.xlsx, double-click on the filename in the workspace on the left.
 3) To run neural network pattern recognition, select Apps > Neural Network Pattern Recognition or 
 type 'nnprtool' in the command line.
 
