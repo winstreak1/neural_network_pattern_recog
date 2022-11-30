@@ -52,10 +52,24 @@ Index in position 1 exceeds array bounds. Index must not exceed 59298.
 ```
 If time permits, I plan to re-visit this code and correct my errors.
 
-## Task 2
+## Task 2: Option 2
+### Train
+To begin, be sure to include Matlab's Neural Network during installation. An alternative which is 
+used in older version of Matlab is type to the following command:
+```commandline
+nnprtool
+```
+Once the neural network pattern recognition tool is opened, I imported the Cancer data set provided
+by Matlab. I left the default setting of Training Data 70%, Validation Data 15%, Test Data 15%. The
+layer size was increased to 20 as demonstrated in class.
 
-## Results
+### Results
+![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")
 
-## Analysis
+
+### Analysis
 
 ## Works Cited
+* MATLAB. (2020, July 21). How to use source control in Matlab with GitHub. YouTube. Retrieved November 30, 2022, from https://www.youtube.com/watch?v=O7A27uMduo0 
+* nanohubtechtalks. (2022, October 12). Data Cleaning with MATLAB. YouTube. Retrieved November 30, 2022, from https://www.youtube.com/watch?v=tfxh5ykuBmI 
+* Alligator.io. (2020, October 12). How to add images in Markdown. DigitalOcean. Retrieved November 30, 2022, from https://www.digitalocean.com/community/tutorials/markdown-markdown-images 
