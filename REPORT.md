@@ -69,7 +69,7 @@ layer size was increased to 20 as demonstrated in class.
 
 ![](nnpr.png "NNPR")
 
-### Results and Analysis
+## Results and Analysis
 ![](performance.png "Performance")
 
 In the image above, we view four lines on the curve. Blue is 'Train', green is 'Validation' and red is 
@@ -109,7 +109,38 @@ the desired outcome.
 
 ![](roc_curve.png "ROC Curve")
 
+## Bonus: Reducing Features
+In order to reduce the number of fratures, the data would have to be modified. In the article, "Using PCA to Reduce Number 
+of Parameters in a Neural Network by 30x Times", Pramododitha suggests applying PCA (Principal component Analysis) to
+reduce the number of pixels. The tradeoff is a slight reduction in image quality (91.4%) with a much smaller input
+shape (100 down from 784). 
+
+If I were to manually trim the data, the fastest and easiest way to do so is to remove the beginning and end zero's of each
+row of data. I would do so for all first and last zero's in a row. This process would be repeated until a 1 in any row is 
+encountered. At this point, the row should be left alone as this point indicates the data modification is concluded.This way 
+image quality is still maintained at 100%. It is important to note this change would need to be done prior to the rows being 
+concatenated. I would perform this task through code. The code would be the following:
+```commandline
+%input data
+DATA = readcell('optdigits.xlsx');
+
+%loop through spreadsheet and strip zero's from every rows. Both left and right character until value of 1 is reached.
+for row = 1:size(DATA,1)
+    str = 1;
+    leftStr = strip(str, left)
+    rightStr = strip(str, right)
+    
+    if leftStr || rightStr == 1:
+    end
+ end
+ 
+%write cleaned data to file
+DATA1 = writecell(optdigits_stripped.xlsx');   
+```
+
 ## Works Cited
 * MATLAB. (2020, July 21). How to use source control in Matlab with GitHub. YouTube. Retrieved November 30, 2022, from https://www.youtube.com/watch?v=O7A27uMduo0 
 * nanohubtechtalks. (2022, October 12). Data Cleaning with MATLAB. YouTube. Retrieved November 30, 2022, from https://www.youtube.com/watch?v=tfxh5ykuBmI 
-* Alligator.io. (2020, October 12). How to add images in Markdown. DigitalOcean. Retrieved November 30, 2022, from https://www.digitalocean.com/community/tutorials/markdown-markdown-images 
+* Alligator.io. (2020, October 12). How to add images in Markdown. DigitalOcean. Retrieved November 30, 2022, from https://www.digitalocean.com/community/tutorials/markdown-markdown-images
+* Pramoditha, R. (2022, June 13). Using PCA to reduce number of parameters in a neural network by 30X Times. Medium. Retrieved December 1, 2022, from https://towardsdatascience.com/using-pca-to-reduce-number-of-parameters-in-a-neural-network-by-30x-times-fcc737159282
+* STR. Remove leading and trailing characters from strings - MATLAB. (n.d.). Retrieved December 1, 2022, from https://www.mathworks.com/help/matlab/ref/strip.html 
