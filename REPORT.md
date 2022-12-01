@@ -69,13 +69,43 @@ layer size was increased to 20 as demonstrated in class.
 
 ![](nnpr.png "NNPR")
 
-### Results
-![](training_state.png "Training State")
-![](training_results.png "Training Results")
-### Analysis
+### Results and Analysis
 ![](performance.png "Performance")
 
+In the image above, we view four lines on the curve. Blue is 'Train', green is 'Validation' and red is 
+'Test'. The model was directly built using the 'Train' data set. 'Validation' is used to find the 
+optimal machine learning model. At the beginning of training, cross-entropy specifies how well the
+training is. As the training set continues to decrease cross-entropy, it approaches optimal value
+where the number of epochs no longer decreases. this point is where training should be stopped. Beyond 
+this low, over-fitting occurs. After this point, the model performs poorly. The point where over-fitting 
+is detected is where 'Train' and 'Validation' lines diverge and crossover. Beyond the divergence, 'Train' 
+set errors will decrease and 'Validation' set errors increase.
+
 ![](confusion_matrix.png "Confusion Matrix")
+
+The confusion matrix above shows how well the model is performing. 70% of the data is used to build the 
+training model. In the training confusion matrix at top left, you'll notice the coljmns are the target 
+classes and the rows are the output classes. In the top left of the target matrix, 314 cases belong to 
+class 1. This represents the true positive value. This value shows a correct prediction that sets in class 
+1 are indeed class 1. To the right of true positive, the value 9 represents the false positive (Type I Error)
+where the model incorrectly predicted the value of 1. Below the false positive value of 9 is the value 157 
+which represents the true negative value. This means 159 sets were correctly predicted to belong to class 2. 
+Finally, the value 9 in column 1, row 2 is the false negative (Type II Error). It is a misprediction that the 
+set belongs to class 2 when it really belongs to class 1. The value 97.2 in the third column, first row is the 
+positive predictive value (PPV). This is the percentage of true positive values. Below PPPV is the False 
+omission rate of 94.6%. This represents the percentage of true negative values. In the first column, third row
+we have the sensitivity or recall value of 97.2%. Sensitivity represents the true positive rate which you'll 
+notice equals the positive predicitve value. In the second column, third row, the fall-out or false positive 
+rate is the same value as the false omission rate. LAstly, the third row, third column shows the accuracy of 
+the model. This value is the total true positive value plus the total true negative values divided by the total
+population size. 
+
+The accuracy value to be reported should be the accuracy of the test confusion matrix since it
+includes information your not specifically testing for. The validation confusion matrix gives you an idea of where
+to stop the training and the test confusion matrix reflects the size of the validation confusion matrix. The true
+performance of the model is shown in the test confusion matrix by reporting the precision, recall and accuracy. It is 
+also important to note the test set should only be used once rather than repeating the training in order to arrive at
+the desired outcome.
 
 ![](roc_curve.png "ROC Curve")
 
